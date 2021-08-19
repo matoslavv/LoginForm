@@ -1,0 +1,121 @@
+.card__container {
+	max-width: 1800px;
+	min-height: 800px;
+	margin: 0 auto;
+	transform: translateY(70px);
+	background-image: url('../assets/pattern-background-desktop.svg');
+	background-color: $pale_blue;
+	background-position: 0px -40px;
+	background-repeat-y: no-repeat;
+}
+
+.card {
+	margin: 0 auto;
+	background-color: white;
+	border: 0px solid transparent;
+	border-radius: 20px;
+	max-width: 330px;
+	text-align: center;
+	line-height: 1.6rem;
+	transform: translateY(19%);
+
+	&__img {
+		border-radius: 20px 20px 0 0;
+	}
+
+	&__headline {
+		font-size: em(22);
+		font-weight: 900;
+	}
+
+	&__text {
+		font-weight: 500;
+		color: $desaturated_blue;
+		letter-spacing: 0.4px;
+	}
+
+	&__wrapper {
+		padding: 0 rem(20);
+	}
+}
+
+.card__plan {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: rem(30) 0 rem(17) 0;
+	border-radius: 20px;
+	background-color: $very_pale_blue;
+
+	&__option {
+		margin: rem(20) rem(20) rem(20) 0;
+	}
+
+	&__title {
+		font-size: em(15);
+		font-weight: 900;
+		color: black;
+		margin: 0;
+	}
+
+	&__price {
+		font-size: em(15);
+		color: $desaturated_blue;
+	}
+
+	&__link {
+		font-size: em(14);
+		font-weight: 700;
+		color: $bright_blue;
+		text-decoration: underline;
+		transition: 0.2s linear;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: lighten($color: $bright_blue, $amount: 25);
+		}
+	}
+}
+
+.card__footer {
+	margin: rem(25) auto rem(20) auto;
+	padding-bottom: rem(25);
+
+	.proceed-btn {
+		background-color: $bright_blue;
+		color: white;
+		box-shadow: 0px 3px 14px $bright_blue;
+		margin-bottom: rem(10) !important;
+
+		&:hover,
+		&:focus {
+			background-color: lighten($color: $bright_blue, $amount: 25);
+			box-shadow: none;
+		}
+	}
+
+	.cancel-btn {
+		background-color: transparent;
+		color: $desaturated_blue;
+
+		&:hover,
+		&:focus {
+			color: black;
+		}
+	}
+
+	.proceed-btn,
+	.cancel-btn {
+		display: block;
+		width: 100%;
+		cursor: pointer;
+		padding: rem(15) rem(45);
+		border: none;
+		border-radius: 15px;
+		font-weight: 700;
+		font-size: em(15);
+		transition: 0.2s linear;
+		// white-space: nowrap;
+	}
+}
